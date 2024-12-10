@@ -7,7 +7,7 @@ public class MyString {
         System.out.println(countChar(hello, 'h'));
         System.out.println(countChar(hello, 'l'));
         System.out.println(countChar(hello, 'z'));
-        System.out.println(spacedString(hello));
+        System.out.println(spacedString("a"));
         System.out.println(subsetOf("spa","space"));
         System.out.println(subsetOf(hello, "fhell"));
         System.out.println(randomStringOfLetters(5));
@@ -118,6 +118,9 @@ public class MyString {
      */
     public static String remove(String str1, String str2) {
         String newStr = "";
+        if (str2.length() == 0) {
+            return str1;
+        }
         for (int i = 0; i < str2.length(); i++) {
             char c = str2.charAt(i);
             for (int j = 0; j < str1.length(); j++) {
