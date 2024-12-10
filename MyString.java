@@ -7,7 +7,7 @@ public class MyString {
         System.out.println(countChar(hello, 'h'));
         System.out.println(countChar(hello, 'l'));
         System.out.println(countChar(hello, 'z'));
-        System.out.println(spacedString("a"));
+        System.out.println(spacedString("hello"));
         System.out.println(subsetOf("spa","space"));
         System.out.println(subsetOf(hello, "fhell"));
         System.out.println(randomStringOfLetters(5));
@@ -82,8 +82,9 @@ public class MyString {
             return str;
         }
         for (int i = 0; i < str.length(); i++) {
+            newStr += str.charAt(i);
             if (i < str.length() - 1) {
-                newStr += str.charAt(i) + " ";
+                newStr += " ";
             }
         }
         return newStr;
