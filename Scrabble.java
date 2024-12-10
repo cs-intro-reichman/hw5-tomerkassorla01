@@ -73,7 +73,7 @@ public class Scrabble {
 		if (word.length() == 10) {
 			sum += 50;
 		}
-		if (MyString.subsetOf(word,"runi")) {
+		if (MyString.subsetOf("runi", word)) {
 			sum += 1000;
 		}
 		return sum;
@@ -118,7 +118,7 @@ public class Scrabble {
 					System.out.println("");
 				}
 				else {
-					System.out.println("Inalid word. Try again.");
+					System.out.println("Invalid word. Try again.");
 				}
 			}
 		}
@@ -160,10 +160,10 @@ public class Scrabble {
 
 	public static void main(String[] args) {
 		//// Uncomment the test you want to run
-		////testBuildingTheDictionary();  
-		////testScrabbleScore();    
-		////testCreateHands();  
-		////testPlayHands();
+		testBuildingTheDictionary();  
+		testScrabbleScore();    
+		testCreateHands();  
+		testPlayHands();
 		playGame();
 	}
 
@@ -191,7 +191,7 @@ public class Scrabble {
 	public static void testPlayHands() {
 		init();
 		playHand("ocostrza");
-		//playHand("arbffip");
-		//playHand("aretiin");
+		playHand("arbffip");
+		playHand("aretiin");
 	}
 }
