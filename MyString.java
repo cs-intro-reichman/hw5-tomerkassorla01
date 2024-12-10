@@ -78,6 +78,9 @@ public class MyString {
      */
     public static String spacedString(String str) {
         String newStr = "";
+        if (str.length() == 1) {
+            return str;
+        }
         for (int i = 0; i < str.length() -1; i++) {
             newStr += str.charAt(i) + " ";
         }
@@ -115,12 +118,12 @@ public class MyString {
      */
     public static String remove(String str1, String str2) {
         String newStr = "";
-        for (int i = 0; i < str1.length(); i++) {
-            char c = str1.charAt(i);
-            for (int j = 0; j < str2.length(); j++) {
-                if (c == str2.charAt(j)) {
-                    newStr = str2.substring(0,j) + str2.substring(j + 1);
-                    str2 = newStr;
+        for (int i = 0; i < str2.length(); i++) {
+            char c = str2.charAt(i);
+            for (int j = 0; j < str1.length(); j++) {
+                if (c == str1.charAt(j)) {
+                    newStr = str1.substring(0,j) + str1.substring(j + 1);
+                    str1 = newStr;
                     break;
                 }
             }
