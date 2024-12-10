@@ -78,13 +78,14 @@ public class MyString {
      */
     public static String spacedString(String str) {
         String newStr = "";
-        if (str.length() == 1) {
+        if (str.isEmpty() || str.length() == 1) {
             return str;
         }
-        for (int i = 0; i < str.length() -1; i++) {
-            newStr += str.charAt(i) + " ";
+        for (int i = 0; i < str.length(); i++) {
+            if (i < str.length() - 1) {
+                newStr += str.charAt(i) + " ";
+            }
         }
-        newStr += str.charAt(str.length() -1);
         return newStr;
     }
   
